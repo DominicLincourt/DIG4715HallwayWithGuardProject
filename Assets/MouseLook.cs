@@ -8,8 +8,8 @@ public class MouseLook : MonoBehaviour
     public float ySensitivity = 15;
     public float minimumX = -360;
     public float maximumX = 360;
-    public float minimumY = -60;
-    public float maximumY = 60;
+    public float minimumY = -90;
+    public float maximumY = 90;
     float rotationX = 0;
     float rotationY = 0;
 
@@ -70,7 +70,7 @@ public class MouseLook : MonoBehaviour
 
         //keeps the camera from going out of bounds
         rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
-        rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+        //rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
 
         //Angle Axis: "Creates a rotation which rotates angle degrees around axis."
         Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
