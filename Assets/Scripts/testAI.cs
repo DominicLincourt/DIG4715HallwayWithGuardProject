@@ -18,7 +18,7 @@ public class testAI : MonoBehaviour
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
-        agent.autoBraking = true;
+        agent.autoBraking = false;
         destPoint = 1;
 
         
@@ -48,10 +48,10 @@ public class testAI : MonoBehaviour
     IEnumerator MyWaitMethod()
     {
         agent.speed = 0;
-        Debug.Log("wait 3");
-        yield return new WaitForSeconds(3);
+        Debug.Log("wait 1");
+        yield return new WaitForSeconds(1);
         
-        agent.speed = 2;
+        agent.speed = 3;
     }
 
 
